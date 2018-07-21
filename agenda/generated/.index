@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="agenda" increment="1532172283998">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="agenda" increment="1532180720031">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="agenda.api"/>
@@ -22,12 +22,52 @@
       <attribute name="size" value="3062" type="Long"/>
       <attribute name="url" value="generated/agenda.api.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="8B08EB73611016D7A4138F25F31F9F7582B6C82AEDEDEFF1B58FCA93AC6A7C1C"/>
+      <attribute name="osgi.content" value="E34671D4E935B4A7B4D62EBB916BA9D98F7CBC2D4B999132A74463A5826AB744"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/home/lui/eclipse-workspace"/>
       <attribute name="project.path" value="/agenda"/>
     </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="agenda.rest"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="agenda.rest"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="agenda.rest"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="4421" type="Long"/>
+      <attribute name="url" value="generated/agenda.rest.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="F74B12FCCFA70FC10F8A1B58986C6D186D4041624EF1FCAD4FF4BD0C68519D08"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/home/lui/eclipse-workspace"/>
+      <attribute name="project.path" value="/agenda"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=agenda.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.ws.rs)(&amp;(version&gt;=2.0.0)(!(version&gt;=3.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.dm)(&amp;(version&gt;=4.4.0)(!(version&gt;=5.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.8.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
     </requirement>
@@ -47,10 +87,10 @@
       <attribute name="osgi.wiring.host" value="agenda.console"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="4369" type="Long"/>
+      <attribute name="size" value="4370" type="Long"/>
       <attribute name="url" value="generated/agenda.console.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="14EA3AE9A00FF7C1A6EFF2D3433E072037F49256A496FC8AC6F3A90CBE1EEBFB"/>
+      <attribute name="osgi.content" value="0CD3458BB1126D7C6E16722C2DB22CEE015FC110F6AF27B04F4F9F70F1C1DFF5"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/home/lui/eclipse-workspace"/>
@@ -87,7 +127,7 @@
       <attribute name="size" value="4365" type="Long"/>
       <attribute name="url" value="generated/agenda.service.simple.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="C8BBC0FDACE7A7B85F2746E436713C1AD3DC88453B3BD040C8A18C07CAA52246"/>
+      <attribute name="osgi.content" value="7BF13272E1409D35DE99BDED3E72041477CEDA1A37FA14343FEF70D5407703DB"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/home/lui/eclipse-workspace"/>
