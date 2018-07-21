@@ -22,6 +22,11 @@
 		name = Release; \
 		pretty = true; \
 		local = ${build}/release
+		
+-plugin.5.mars: \
+ 	aQute.bnd.repository.p2.provider.P2Repository; \
+ 		url = http://hstaudacher.github.io/osgi-jax-rs-connector; \
+ 		name = osgi-jax-rs-connector
 
 -releaserepo: Release
 -baselinerepo: Release
