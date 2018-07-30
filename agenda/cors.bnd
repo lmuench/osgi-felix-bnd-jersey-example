@@ -1,0 +1,2 @@
+Private-Package: filters.cors
+Bundle-Activator: filters.cors.Activator

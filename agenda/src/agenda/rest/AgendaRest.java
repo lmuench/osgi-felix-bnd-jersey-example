@@ -1,5 +1,6 @@
 package agenda.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,20 +15,19 @@ public class AgendaRest {
 	private volatile Agenda agenda;
 	
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String listConferences() {
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<String> listConferences() {
 		List<Conference> conferences = agenda.listConferences();
 		
-		String res = "";
+		List<String> res = new ArrayList<>();
 		
 		if (conferences != null) {			
 			for (Conference conference : conferences) {
 				System.out.println(conference.getName());
-				res += conference.getName() + " ";
+				res.add(conference.getName());
 			}
 		} else {
 			System.out.println("Agenda not available");
-			res += "There are no conferences.";
 		}
 		
 		return res;
